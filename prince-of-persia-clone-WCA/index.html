@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince of Persia Clone</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+        }
+        canvas {
+            border: 2px solid #333;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        #gameContainer {
+            position: relative;
+        }
+        #loadingScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="loadingScreen">
+            <h1>Prince of Persia Clone</h1>
+            <p>Loading...</p>
+        </div>
+    </div>
+    
+    <script>
+        function loadGameScripts() {
+            const scripts = [
+                'src/utils/constants.js',
+                'src/entities/Player.js',
+                'src/entities/enemies/Guard.js',
+                'src/entities/enemies/ArmoredGuard.js',
+                'src/entities/enemies/Bat.js',
+                'src/entities/items/HealthPotion.js',
+                'src/entities/items/LifeMedal.js',
+                'src/scenes/BootScene.js',
+                'src/scenes/PreloadScene.js',
+                'src/scenes/MenuScene.js',
+                'src/scenes/GameScene.js',
+                'src/scenes/LevelCompleteScene.js',
+                'src/main.js'
+            ];
+            
+            let loadedScripts = 0;
+            
+            scripts.forEach(src => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onload = () => {
+                    loadedScripts++;
+                    console.log(`Loaded script: ${src} (${loadedScripts}/${scripts.length})`);
+                    if (loadedScripts === scripts.length) {
+                        console.log('All scripts loaded, initializing game...');
+                        // Initialize game after all scripts are loaded
+                        setTimeout(() => {
+                            if (typeof Game !== 'undefined') {
+                                window.gameInstance = new Game();
+                                window.gameInstance.init();
+                            }
+                        }, 100);
+                    }
+                };
+                script.onerror = () => {
+                    console.error('Failed to load script:', src);
+                };
+                document.head.appendChild(script);
+            });
+        }
+    </script>
+    <script src="phaser.min.js" onload="loadGameScripts()"></script>
+</body>
+</html>

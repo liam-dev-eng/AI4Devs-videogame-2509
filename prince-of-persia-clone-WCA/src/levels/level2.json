@@ -1,0 +1,125 @@
+{
+  "levelNumber": 2,
+  "name": "The Armory",
+  "width": 2000,
+  "height": 600,
+  "playerStart": {
+    "x": 80,
+    "y": 500
+  },
+  "platforms": [
+    { "x": 0, "y": 550, "width": 300, "height": 32 },
+    { "x": 400, "y": 480, "width": 150, "height": 32 },
+    { "x": 650, "y": 400, "width": 200, "height": 32 },
+    { "x": 950, "y": 320, "width": 150, "height": 32 },
+    { "x": 1200, "y": 400, "width": 300, "height": 32 },
+    { "x": 1600, "y": 300, "width": 200, "height": 32 },
+    { "x": 1850, "y": 200, "width": 150, "height": 32 },
+    { "x": 300, "y": 200, "width": 100, "height": 32 },
+    { "x": 500, "y": 250, "width": 100, "height": 32 },
+    { "x": 1400, "y": 150, "width": 150, "height": 32 }
+  ],
+  "enemies": [
+    {
+      "type": "Guard",
+      "x": 500,
+      "y": 430,
+      "patrol": { "left": 450, "right": 600 }
+    },
+    {
+      "type": "ArmoredGuard",
+      "x": 750,
+      "y": 350,
+      "patrol": { "left": 700, "right": 850 }
+    },
+    {
+      "type": "Guard",
+      "x": 1350,
+      "y": 350,
+      "patrol": { "left": 1250, "right": 1450 }
+    },
+    {
+      "type": "Bat",
+      "x": 600,
+      "y": 150,
+      "patrol": { "radius": 100 }
+    },
+    {
+      "type": "Bat",
+      "x": 1200,
+      "y": 200,
+      "patrol": { "radius": 80 }
+    }
+  ],
+  "items": [
+    {
+      "type": "HealthPotion",
+      "subtype": "small",
+      "x": 450,
+      "y": 430
+    },
+    {
+      "type": "HealthPotion",
+      "subtype": "large",
+      "x": 1000,
+      "y": 270
+    },
+    {
+      "type": "HealthPotion",
+      "subtype": "small",
+      "x": 1650,
+      "y": 250
+    }
+  ],
+  "traps": [
+    {
+      "type": "spikes",
+      "x": 580,
+      "y": 380,
+      "width": 64,
+      "activeTime": 1500,
+      "inactiveTime": 2500
+    },
+    {
+      "type": "spikes",
+      "x": 1120,
+      "y": 380,
+      "width": 64,
+      "activeTime": 2000,
+      "inactiveTime": 2000
+    },
+    {
+      "type": "blade",
+      "x": 900,
+      "y": 200,
+      "swingRadius": 60,
+      "swingSpeed": 1.5
+    },
+    {
+      "type": "pit",
+      "x": 850,
+      "y": 550,
+      "width": 96,
+      "height": 600
+    }
+  ],
+  "background": {
+    "color": "#1C1C1C",
+    "layers": [
+      {
+        "image": "background",
+        "x": 0,
+        "y": 0,
+        "parallax": 0.3
+      }
+    ]
+  },
+  "exit": {
+    "x": 1900,
+    "y": 150,
+    "width": 50,
+    "height": 80
+  },
+  "timeLimit": 280,
+  "description": "Face your first armored guard! Use strategy to defeat tougher enemies."
+}

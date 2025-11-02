@@ -1,0 +1,200 @@
+{
+  "levelNumber": 3,
+  "name": "The Gauntlet",
+  "width": 2400,
+  "height": 600,
+  "playerStart": {
+    "x": 100,
+    "y": 480
+  },
+  "platforms": [
+    { "x": 0, "y": 520, "width": 250, "height": 32 },
+    { "x": 350, "y": 450, "width": 100, "height": 32 },
+    { "x": 550, "y": 380, "width": 150, "height": 32 },
+    { "x": 800, "y": 300, "width": 200, "height": 32 },
+    { "x": 1100, "y": 380, "width": 150, "height": 32 },
+    { "x": 1350, "y": 450, "width": 200, "height": 32 },
+    { "x": 1650, "y": 350, "width": 150, "height": 32 },
+    { "x": 1900, "y": 250, "width": 200, "height": 32 },
+    { "x": 2200, "y": 150, "width": 200, "height": 32 },
+    { "x": 250, "y": 300, "width": 80, "height": 32 },
+    { "x": 450, "y": 200, "width": 80, "height": 32 },
+    { "x": 1000, "y": 150, "width": 100, "height": 32 },
+    { "x": 1800, "y": 100, "width": 100, "height": 32 }
+  ],
+  "enemies": [
+    {
+      "type": "Guard",
+      "x": 400,
+      "y": 400,
+      "patrol": { "left": 370, "right": 430 }
+    },
+    {
+      "type": "ArmoredGuard",
+      "x": 650,
+      "y": 330,
+      "patrol": { "left": 580, "right": 720 }
+    },
+    {
+      "type": "Guard",
+      "x": 900,
+      "y": 250,
+      "patrol": { "left": 820, "right": 980 }
+    },
+    {
+      "type": "ArmoredGuard",
+      "x": 1200,
+      "y": 330,
+      "patrol": { "left": 1120, "right": 1280 }
+    },
+    {
+      "type": "Guard",
+      "x": 1450,
+      "y": 400,
+      "patrol": { "left": 1380, "right": 1520 }
+    },
+    {
+      "type": "ArmoredGuard",
+      "x": 1750,
+      "y": 300,
+      "patrol": { "left": 1680, "right": 1820 }
+    },
+    {
+      "type": "Bat",
+      "x": 500,
+      "y": 100,
+      "patrol": { "radius": 120 }
+    },
+    {
+      "type": "Bat",
+      "x": 1200,
+      "y": 150,
+      "patrol": { "radius": 100 }
+    },
+    {
+      "type": "Bat",
+      "x": 2000,
+      "y": 120,
+      "patrol": { "radius": 90 }
+    }
+  ],
+  "items": [
+    {
+      "type": "HealthPotion",
+      "subtype": "small",
+      "x": 300,
+      "y": 250
+    },
+    {
+      "type": "HealthPotion",
+      "subtype": "large",
+      "x": 850,
+      "y": 250
+    },
+    {
+      "type": "HealthPotion",
+      "subtype": "small",
+      "x": 1500,
+      "y": 400
+    },
+    {
+      "type": "HealthPotion",
+      "subtype": "large",
+      "x": 1950,
+      "y": 200
+    },
+    {
+      "type": "LifeMedal",
+      "x": 1050,
+      "y": 100
+    }
+  ],
+  "traps": [
+    {
+      "type": "spikes",
+      "x": 480,
+      "y": 360,
+      "width": 64,
+      "activeTime": 1500,
+      "inactiveTime": 2000
+    },
+    {
+      "type": "spikes",
+      "x": 730,
+      "y": 280,
+      "width": 64,
+      "activeTime": 1200,
+      "inactiveTime": 1800
+    },
+    {
+      "type": "spikes",
+      "x": 1030,
+      "y": 360,
+      "width": 64,
+      "activeTime": 1800,
+      "inactiveTime": 1500
+    },
+    {
+      "type": "spikes",
+      "x": 1580,
+      "y": 330,
+      "width": 64,
+      "activeTime": 1400,
+      "inactiveTime": 2200
+    },
+    {
+      "type": "blade",
+      "x": 750,
+      "y": 150,
+      "swingRadius": 80,
+      "swingSpeed": 2.0
+    },
+    {
+      "type": "blade",
+      "x": 1400,
+      "y": 200,
+      "swingRadius": 70,
+      "swingSpeed": 1.8
+    },
+    {
+      "type": "pit",
+      "x": 250,
+      "y": 520,
+      "width": 96,
+      "height": 600
+    },
+    {
+      "type": "pit",
+      "x": 1050,
+      "y": 520,
+      "width": 64,
+      "height": 600
+    },
+    {
+      "type": "pit",
+      "x": 1550,
+      "y": 520,
+      "width": 96,
+      "height": 600
+    }
+  ],
+  "background": {
+    "color": "#0F0F0F",
+    "layers": [
+      {
+        "image": "background",
+        "x": 0,
+        "y": 0,
+        "parallax": 0.2
+      }
+    ]
+  },
+  "exit": {
+    "x": 2300,
+    "y": 100,
+    "width": 50,
+    "height": 80
+  },
+  "timeLimit": 250,
+  "description": "The challenge increases! Navigate multiple traps and defeat numerous enemies to prove your worth."
+}
